@@ -24,15 +24,11 @@ function findMatches(wordToMatch, restaurants) {
     return restaurants;
   }
   return restaurants.filter((place) => {
-    // console.log(place)
     const regex = new RegExp(wordToMatch, 'gi');
-    console.log(regex);
     return place.name.match(regex) || place.category.match(regex);
-    //  
     // || place.address_line_1.match(regex) 
     // || place.zip.match(regex);
   });
-  // return restaurants;
 }
 
 function displayMatches() {
