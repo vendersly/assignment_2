@@ -18,7 +18,6 @@ fetch('/api', {
   });
 
 function findMatches(wordToMatch, restaurants) {  
-  // console.log(wordToMatch)
   while (wordToMatch.length === 0) {
     restaurants = [];
     return restaurants;
