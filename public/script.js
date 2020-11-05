@@ -18,15 +18,16 @@ fetch('/api', {
   });
 
 function findMatches(wordToMatch, restaurants) {  
-  if (wordToMatch.length === 0) {
+  while (wordToMatch.length === 0) {
     restaurants = [];
-  } else {
-    return restaurants.filter((place) => {
-      const regex = new RegExp(wordToMatch, 'gi');
-      return place.name.match(regex) || place.category.match(regex)
-    || place.address_line_1.match(regex) || place.city.match(regex) || place.zip.match(regex);
-    });}
-  return restaurants;
+    return restaurants;
+  }
+  return restaurants.filter((place) => {
+    const regex = new RegExp(wordToMatch, 'gi');
+    return place.name.match(regex) || place.category.match(regex);
+    // || place.address_line_1.match(regex) 
+    // || place.zip.match(regex);
+  });
 }
 
 function displayMatches() {
