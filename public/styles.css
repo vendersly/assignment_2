@@ -1,6 +1,14 @@
 /*CSS*/
 body {
   background: #3895a8;
+  background-image: radial-gradient(  
+  rgb(4, 243, 171), rgb(180, 255, 214)
+  );
+  /*font-family: 'Baloo 2', cursive;*/
+  /*font-family: 'Play', sans-serif;*/
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 16pt;
+  color: #2a2a2a;
 }
 
 .wrapper {
@@ -13,9 +21,9 @@ body {
 }
 
 .header {
-  color: #fff;
+  color: #000;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -26,7 +34,64 @@ body {
 }
 
 /* Enter YOUR lab styles after this line */
-.flex-outer li,
+.header * {
+  margin: 5px;
+}
+.header h1 {
+  text-align: center;
+}
+
+.header h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+  /*max-width: 800px;*/
+}
+
+.search-form * {
+  width: 100%;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.search {
+  font: inherit;
+}
+
+.search-form > .suggestions li {
+  background-color:orange;
+  background-image: linear-gradient(
+    rgb(242, 252, 255), rgb(109, 209, 235)
+  );
+  border: 2px double rgb(102, 102, 139);
+  border-radius: 5px;
+  list-style: none;
+  margin: 10px auto;
+  padding: 12px;
+  width: auto;
+}
+
+li .name {
+  font-size: 20pt;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+@media (max-width: 400px) {
+  .search-form {
+    width: 90%;
+  }
+}
+
+
+/*.flex-outer li,
 .flex-inner {
   display: flex;
   flex-wrap: wrap;
@@ -66,4 +131,4 @@ body {
 .flex-outer {
   max-width:800px;
   padding: 0 16px;
-}
+}*/
